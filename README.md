@@ -61,14 +61,16 @@ Additional Resources:
 * AWS CLI Configured
 * CloudFormation Permissions
 
-## Author
-
-Mayuri Patil
-
-Cloud & DevOps Learner
-
 # Delete Stack
 ```
 aws cloudformation delete-stack \
-  --stack-name myS3 
+  --stack-name my-stack
+
+## Author
+
+Mrunal Patil
+
+Cloud & DevOps Learner
+
+
 ```
