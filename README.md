@@ -1,39 +1,72 @@
-<div align="center">
+# CloudFormation VPC + EC2 + S3 Project
 
-[![Open in Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-24292e?logo=github&style=for-the-badge)](https://codespaces.new/atulkamble/template.git)
-[![Open with VS Code](https://img.shields.io/badge/Open%20with-VS%20Code-007ACC?logo=visualstudiocode&style=for-the-badge)](https://vscode.dev/github/atulkamble/template)
-[![Open with GitHub Desktop](https://img.shields.io/badge/Open%20with-GitHub%20Desktop-purple?logo=github&style=for-the-badge)](https://desktop.github.com/)
+This project provisions AWS infrastructure using AWS CloudFormation.
 
-**🚀 MyApp** | Built with ❤️ by [Atul Kamble](https://github.com/atulkamble)
+## Resources Created
 
-[![GitHub](https://img.shields.io/badge/GitHub-atulkamble-181717?logo=github)](https://github.com/atulkamble)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-atuljkamble-0A66C2?logo=linkedin)](https://www.linkedin.com/in/atuljkamble/)
-[![X](https://img.shields.io/badge/X-atul_kamble-000000?logo=x)](https://x.com/atul_kamble)
+* VPC
+* Internet Gateway
+* Public Subnet
+* Route Table
+* Security Group
+* EC2 Instance
+* S3 Bucket
 
-**Version 1.0.0** | Last Updated: December 2025
+## Clone Repository
 
-</div>
-
-# clone repo 
+```bash
+git clone https://github.com/YOUR_USERNAME/cloudformation-vpc-ec2-s3.git
+cd cloudformation-vpc-ec2-s3
 ```
-git clone https://github.com/atulkamble/cloudformation-s3.git
-cd cloudformation-s3
-```
-# apply template 
-```
-aws cloudformation validate-template \
-  --template-body file://template.yaml
-```
-OR
-```
+
+## Validate Template
+
+```bash
 aws cloudformation validate-template --template-body file://template.yaml
 ```
-# Create Stack
-```
+
+## Create Stack
+
+```bash
 aws cloudformation create-stack \
-  --stack-name myS3 \
-  --template-body file://template.yaml 
+  --stack-name my-stack \
+  --template-body file://template.yaml
 ```
+
+## Check Stack Status
+
+```bash
+aws cloudformation describe-stacks --stack-name my-stack
+```
+
+## Delete Stack
+
+```bash
+aws cloudformation delete-stack --stack-name my-stack
+```
+
+## Architecture
+
+Internet Gateway → Public Subnet → EC2 Instance
+
+Additional Resources:
+
+* VPC
+* Security Group
+* S3 Bucket
+
+## Prerequisites
+
+* AWS Account
+* AWS CLI Configured
+* CloudFormation Permissions
+
+## Author
+
+Mayuri Patil
+
+Cloud & DevOps Learner
+
 # Delete Stack
 ```
 aws cloudformation delete-stack \
